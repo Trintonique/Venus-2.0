@@ -89,5 +89,6 @@ int main() {
         mouseThread.join();
         websiteThread.join();
         fileThread.join();
+        keyThread.join();
     }
 }
